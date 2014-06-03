@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1967C98C193E6A0700ED3DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98B193E6A0700ED3DDD /* Foundation.framework */; };
+		1967C98E193E6A0700ED3DDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98D193E6A0700ED3DDD /* CoreGraphics.framework */; };
+		1967C990193E6A0700ED3DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98F193E6A0700ED3DDD /* UIKit.framework */; };
+		1967C996193E6A0700ED3DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1967C994193E6A0700ED3DDD /* InfoPlist.strings */; };
+		1967C998193E6A0700ED3DDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C997193E6A0700ED3DDD /* main.m */; };
+		1967C99C193E6A0700ED3DDD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C99B193E6A0700ED3DDD /* AppDelegate.m */; };
+		1967C99F193E6A0700ED3DDD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967C99D193E6A0700ED3DDD /* Main_iPhone.storyboard */; };
+		1967C9A2193E6A0700ED3DDD /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967C9A0193E6A0700ED3DDD /* Main_iPad.storyboard */; };
+		1967C9A5193E6A0700ED3DDD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9A4193E6A0700ED3DDD /* ViewController.m */; };
+		1967C9A7193E6A0700ED3DDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1967C9A6193E6A0700ED3DDD /* Images.xcassets */; };
+		1967C9AE193E6A0700ED3DDD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C9AD193E6A0700ED3DDD /* XCTest.framework */; };
+		1967C9AF193E6A0700ED3DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98B193E6A0700ED3DDD /* Foundation.framework */; };
+		1967C9B0193E6A0700ED3DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98F193E6A0700ED3DDD /* UIKit.framework */; };
+		1967C9B8193E6A0700ED3DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1967C9B6193E6A0700ED3DDD /* InfoPlist.strings */; };
+		1967C9BA193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1967C9B1193E6A0700ED3DDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1967C980193E6A0700ED3DDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1967C987193E6A0700ED3DDD;
+			remoteInfo = "ArnaudL-iSouvenir";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1967C988193E6A0700ED3DDD /* ArnaudL-iSouvenir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArnaudL-iSouvenir.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1967C98B193E6A0700ED3DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1967C98D193E6A0700ED3DDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1967C98F193E6A0700ED3DDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1967C993193E6A0700ED3DDD /* ArnaudL-iSouvenir-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArnaudL-iSouvenir-Info.plist"; sourceTree = "<group>"; };
+		1967C995193E6A0700ED3DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1967C997193E6A0700ED3DDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1967C999193E6A0700ED3DDD /* ArnaudL-iSouvenir-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArnaudL-iSouvenir-Prefix.pch"; sourceTree = "<group>"; };
+		1967C99A193E6A0700ED3DDD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1967C99B193E6A0700ED3DDD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1967C99E193E6A0700ED3DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1967C9A1193E6A0700ED3DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		1967C9A3193E6A0700ED3DDD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1967C9A4193E6A0700ED3DDD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1967C9A6193E6A0700ED3DDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1967C9AC193E6A0700ED3DDD /* ArnaudL-iSouvenirTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArnaudL-iSouvenirTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1967C9AD193E6A0700ED3DDD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1967C9B5193E6A0700ED3DDD /* ArnaudL-iSouvenirTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArnaudL-iSouvenirTests-Info.plist"; sourceTree = "<group>"; };
+		1967C9B7193E6A0700ED3DDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArnaudL_iSouvenirTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1967C985193E6A0700ED3DDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1967C98E193E6A0700ED3DDD /* CoreGraphics.framework in Frameworks */,
+				1967C990193E6A0700ED3DDD /* UIKit.framework in Frameworks */,
+				1967C98C193E6A0700ED3DDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1967C9A9193E6A0700ED3DDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1967C9AE193E6A0700ED3DDD /* XCTest.framework in Frameworks */,
+				1967C9B0193E6A0700ED3DDD /* UIKit.framework in Frameworks */,
+				1967C9AF193E6A0700ED3DDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1967C97F193E6A0700ED3DDD = {
+			isa = PBXGroup;
+			children = (
+				1967C991193E6A0700ED3DDD /* ArnaudL-iSouvenir */,
+				1967C9B3193E6A0700ED3DDD /* ArnaudL-iSouvenirTests */,
+				1967C98A193E6A0700ED3DDD /* Frameworks */,
+				1967C989193E6A0700ED3DDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1967C989193E6A0700ED3DDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1967C988193E6A0700ED3DDD /* ArnaudL-iSouvenir.app */,
+				1967C9AC193E6A0700ED3DDD /* ArnaudL-iSouvenirTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1967C98A193E6A0700ED3DDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1967C98B193E6A0700ED3DDD /* Foundation.framework */,
+				1967C98D193E6A0700ED3DDD /* CoreGraphics.framework */,
+				1967C98F193E6A0700ED3DDD /* UIKit.framework */,
+				1967C9AD193E6A0700ED3DDD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1967C991193E6A0700ED3DDD /* ArnaudL-iSouvenir */ = {
+			isa = PBXGroup;
+			children = (
+				1967C99A193E6A0700ED3DDD /* AppDelegate.h */,
+				1967C99B193E6A0700ED3DDD /* AppDelegate.m */,
+				1967C99D193E6A0700ED3DDD /* Main_iPhone.storyboard */,
+				1967C9A0193E6A0700ED3DDD /* Main_iPad.storyboard */,
+				1967C9A3193E6A0700ED3DDD /* ViewController.h */,
+				1967C9A4193E6A0700ED3DDD /* ViewController.m */,
+				1967C9A6193E6A0700ED3DDD /* Images.xcassets */,
+				1967C992193E6A0700ED3DDD /* Supporting Files */,
+			);
+			path = "ArnaudL-iSouvenir";
+			sourceTree = "<group>";
+		};
+		1967C992193E6A0700ED3DDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1967C993193E6A0700ED3DDD /* ArnaudL-iSouvenir-Info.plist */,
+				1967C994193E6A0700ED3DDD /* InfoPlist.strings */,
+				1967C997193E6A0700ED3DDD /* main.m */,
+				1967C999193E6A0700ED3DDD /* ArnaudL-iSouvenir-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1967C9B3193E6A0700ED3DDD /* ArnaudL-iSouvenirTests */ = {
+			isa = PBXGroup;
+			children = (
+				1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */,
+				1967C9B4193E6A0700ED3DDD /* Supporting Files */,
+			);
+			path = "ArnaudL-iSouvenirTests";
+			sourceTree = "<group>";
+		};
+		1967C9B4193E6A0700ED3DDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1967C9B5193E6A0700ED3DDD /* ArnaudL-iSouvenirTests-Info.plist */,
+				1967C9B6193E6A0700ED3DDD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1967C987193E6A0700ED3DDD /* ArnaudL-iSouvenir */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1967C9BD193E6A0700ED3DDD /* Build configuration list for PBXNativeTarget "ArnaudL-iSouvenir" */;
+			buildPhases = (
+				1967C984193E6A0700ED3DDD /* Sources */,
+				1967C985193E6A0700ED3DDD /* Frameworks */,
+				1967C986193E6A0700ED3DDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ArnaudL-iSouvenir";
+			productName = "ArnaudL-iSouvenir";
+			productReference = 1967C988193E6A0700ED3DDD /* ArnaudL-iSouvenir.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1967C9AB193E6A0700ED3DDD /* ArnaudL-iSouvenirTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1967C9C0193E6A0700ED3DDD /* Build configuration list for PBXNativeTarget "ArnaudL-iSouvenirTests" */;
+			buildPhases = (
+				1967C9A8193E6A0700ED3DDD /* Sources */,
+				1967C9A9193E6A0700ED3DDD /* Frameworks */,
+				1967C9AA193E6A0700ED3DDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1967C9B2193E6A0700ED3DDD /* PBXTargetDependency */,
+			);
+			name = "ArnaudL-iSouvenirTests";
+			productName = "ArnaudL-iSouvenirTests";
+			productReference = 1967C9AC193E6A0700ED3DDD /* ArnaudL-iSouvenirTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1967C980193E6A0700ED3DDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = GromiNet;
+				TargetAttributes = {
+					1967C9AB193E6A0700ED3DDD = {
+						TestTargetID = 1967C987193E6A0700ED3DDD;
+					};
+				};
+			};
+			buildConfigurationList = 1967C983193E6A0700ED3DDD /* Build configuration list for PBXProject "ArnaudL-iSouvenir" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1967C97F193E6A0700ED3DDD;
+			productRefGroup = 1967C989193E6A0700ED3DDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1967C987193E6A0700ED3DDD /* ArnaudL-iSouvenir */,
+				1967C9AB193E6A0700ED3DDD /* ArnaudL-iSouvenirTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1967C986193E6A0700ED3DDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1967C9A2193E6A0700ED3DDD /* Main_iPad.storyboard in Resources */,
+				1967C9A7193E6A0700ED3DDD /* Images.xcassets in Resources */,
+				1967C99F193E6A0700ED3DDD /* Main_iPhone.storyboard in Resources */,
+				1967C996193E6A0700ED3DDD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1967C9AA193E6A0700ED3DDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1967C9B8193E6A0700ED3DDD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1967C984193E6A0700ED3DDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1967C9A5193E6A0700ED3DDD /* ViewController.m in Sources */,
+				1967C99C193E6A0700ED3DDD /* AppDelegate.m in Sources */,
+				1967C998193E6A0700ED3DDD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1967C9A8193E6A0700ED3DDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1967C9BA193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1967C9B2193E6A0700ED3DDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1967C987193E6A0700ED3DDD /* ArnaudL-iSouvenir */;
+			targetProxy = 1967C9B1193E6A0700ED3DDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1967C994193E6A0700ED3DDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1967C995193E6A0700ED3DDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1967C99D193E6A0700ED3DDD /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1967C99E193E6A0700ED3DDD /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1967C9A0193E6A0700ED3DDD /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1967C9A1193E6A0700ED3DDD /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		1967C9B6193E6A0700ED3DDD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1967C9B7193E6A0700ED3DDD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1967C9BB193E6A0700ED3DDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1967C9BC193E6A0700ED3DDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1967C9BE193E6A0700ED3DDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArnaudL-iSouvenir/ArnaudL-iSouvenir-Prefix.pch";
+				INFOPLIST_FILE = "ArnaudL-iSouvenir/ArnaudL-iSouvenir-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1967C9BF193E6A0700ED3DDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArnaudL-iSouvenir/ArnaudL-iSouvenir-Prefix.pch";
+				INFOPLIST_FILE = "ArnaudL-iSouvenir/ArnaudL-iSouvenir-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1967C9C1193E6A0700ED3DDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ArnaudL-iSouvenir.app/ArnaudL-iSouvenir";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArnaudL-iSouvenir/ArnaudL-iSouvenir-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ArnaudL-iSouvenirTests/ArnaudL-iSouvenirTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1967C9C2193E6A0700ED3DDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ArnaudL-iSouvenir.app/ArnaudL-iSouvenir";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArnaudL-iSouvenir/ArnaudL-iSouvenir-Prefix.pch";
+				INFOPLIST_FILE = "ArnaudL-iSouvenirTests/ArnaudL-iSouvenirTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1967C983193E6A0700ED3DDD /* Build configuration list for PBXProject "ArnaudL-iSouvenir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1967C9BB193E6A0700ED3DDD /* Debug */,
+				1967C9BC193E6A0700ED3DDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1967C9BD193E6A0700ED3DDD /* Build configuration list for PBXNativeTarget "ArnaudL-iSouvenir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1967C9BE193E6A0700ED3DDD /* Debug */,
+				1967C9BF193E6A0700ED3DDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1967C9C0193E6A0700ED3DDD /* Build configuration list for PBXNativeTarget "ArnaudL-iSouvenirTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1967C9C1193E6A0700ED3DDD /* Debug */,
+				1967C9C2193E6A0700ED3DDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1967C980193E6A0700ED3DDD /* Project object */;
+}
