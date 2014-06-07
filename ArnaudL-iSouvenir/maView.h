@@ -10,9 +10,13 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 #import "mesAnnotations.h"
 
-@interface maView : UIView <MKMapViewDelegate, UIActionSheetDelegate, UIAlertViewDelegate> {
+@interface maView : UIView <MKMapViewDelegate, //Carte
+                        UIActionSheetDelegate, //Popup ToolBar
+                        UIAlertViewDelegate>   //Popup Alert
+{
     //Interne
     BOOL isIpad;
     BOOL isIOS6;
@@ -23,6 +27,7 @@
     
     // Manager
     CLLocationManager* monLocManager;
+    ABPeoplePickerNavigationController *abNavController;
 
     // Vues
     MKMapView *maMapView;
@@ -47,7 +52,8 @@
     UILongPressGestureRecognizer *clickLong;
 }
 
-@property CLLocationCoordinate2D selectedCoordinate;
+@property UIViewController *VC;
+@property MKAnnotationView *lastAnnotationSelected; //retour AddressBook
 
 -(void)setFromOrientation:(UIInterfaceOrientation)orientation;
 

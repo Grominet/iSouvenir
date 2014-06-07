@@ -53,11 +53,20 @@
         
         // Init ToolBar
             // Init bouton de la ToolBar
-        //addAnnotationBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ios7-home-icon.png"] style:UIBarButtonItemStyleDone target:self action:@selector(refreshPage:)];
-        followUserLocationBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(switchFollowUserLocation:)];
+
+        UIImage* monImage = [UIImage alloc];
+        monImage = [UIImage imageNamed:@"localisation.png"];
+        UIImage* monImageLocalisation = [UIImage imageWithCGImage:[monImage CGImage] scale:(monImage.scale * 50.0/24.0) orientation:monImage.imageOrientation];
+        followUserLocationBarButton = [[UIBarButtonItem alloc] initWithImage:monImageLocalisation style:UIBarButtonItemStyleDone target:self action:@selector(switchFollowUserLocation:)];
+        
+        
         addAnnotationBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addManualAnnotation:)];
         listAnnotationBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(getListAnnotation:)];
-        switchGeoCoding = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(switchGeoCoding:)];
+        
+        monImage = [UIImage imageNamed:@"world.png"];
+        UIImage* monImageWorld = [UIImage imageWithCGImage:[monImage CGImage] scale:(monImage.scale * 50.0/24.0) orientation:monImage.imageOrientation];
+        switchGeoCoding = [[UIBarButtonItem alloc]initWithImage:monImageWorld style:UIBarButtonItemStyleDone target:self action:@selector(switchGeoCoding:)];
+        
             // Standard space
         flexibleSpaceBarButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         fixed10SpaceBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
@@ -163,11 +172,9 @@
      maListeAnnotationsTriee = [maListeAnnotations sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     
     //BUG : limite l'affichage à i<9 car bug avec l'iPad si on doit scroller dans un ActionSheet
-    
     if (maListeAnnotationsTriee.count>0) {
         for (int i=0; i<maListeAnnotationsTriee.count && i<9; i++) {
             [annotationListActionSheet addButtonWithTitle:[[maListeAnnotationsTriee objectAtIndex:i] title]];
-            NSLog(@"%d : %@",i,[[maListeAnnotationsTriee objectAtIndex:i] title]);
         }
         [annotationListActionSheet addButtonWithTitle:@"Annuler"]; //ajout Cancel (tjs le dernier)
         if (isIpad) {
@@ -291,6 +298,7 @@
         [pin setCanShowCallout:YES];
         [pin setDraggable:YES];
         [pin setRightCalloutAccessoryView:[UIButton buttonWithType:UIButtonTypeContactAdd]];
+    
         return pin;
     }
     else {
@@ -308,10 +316,21 @@
         // Actions sur l'annotation
         if ([(UIButton*)control buttonType] == UIButtonTypeContactAdd) {
             // Bouton ContactAdd
+            abNavController = [[ABPeoplePickerNavigationController alloc]init];
+            [abNavController setPeoplePickerDelegate:(id)_VC];
             
+            NSArray *aAfficher = [NSArray arrayWithObjects:
+                                  [NSNumber numberWithInt:kABPersonFirstNameProperty],
+                                  [NSNumber numberWithInt:kABPersonLastNameProperty],
+                                  nil];
+            [abNavController setDisplayedProperties:aAfficher];
+            [self setLastAnnotationSelected:view];
+            [_VC presentViewController:abNavController animated:YES completion:nil];
+
         }
         if ([(UIButton*)control buttonType] == UIButtonTypeInfoLight) {
             // Bouton InfoLight
+
             
         }
         
@@ -339,10 +358,8 @@
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"butIndex: %ld sur %ld",(long)buttonIndex, (long)[actionSheet numberOfButtons]);
     if (buttonIndex>=0)
         { // test si on a cliqué en dehors des boutons
-            NSLog(@"%@",[actionSheet buttonTitleAtIndex:buttonIndex]);
         if (![[actionSheet buttonTitleAtIndex:buttonIndex]  isEqual: @"Annuler"])
             { //Si on n'a pas annulé l'actionSheet avec un : !bouton = "Annuler"
             if (actionSheet == geoCodingActionSheet) {
@@ -359,7 +376,6 @@
                 // Actions annotationListActionSheet
                 if (buttonIndex<[actionSheet numberOfButtons] && buttonIndex>=0) {
                     //Index correct
-                    NSLog(@"butInd: %ld et %@",(long)buttonIndex, [[maListeAnnotationsTriee objectAtIndex:buttonIndex] title]);
                     [maMapView selectAnnotation:[maListeAnnotationsTriee objectAtIndex:buttonIndex] animated:YES];
                 }
             }
@@ -427,4 +443,7 @@
 {
     //rien à faire, se ferme toute seule
 }
+
+
+
 @end

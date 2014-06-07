@@ -10,7 +10,6 @@
 		195B8C37194265FB00189019 /* mesAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = 195B8C36194265FB00189019 /* mesAnnotations.m */; };
 		195C89AC193FB7E300FFDD85 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195C89AB193FB7E300FFDD85 /* CoreLocation.framework */; };
 		195C89AE193FB7E900FFDD85 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195C89AD193FB7E900FFDD85 /* MapKit.framework */; };
-		195C89B4193FBB2400FFDD85 /* fond-2048x2048.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 195C89B3193FBB2400FFDD85 /* fond-2048x2048.jpg */; };
 		1967C98C193E6A0700ED3DDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98B193E6A0700ED3DDD /* Foundation.framework */; };
 		1967C98E193E6A0700ED3DDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98D193E6A0700ED3DDD /* CoreGraphics.framework */; };
 		1967C990193E6A0700ED3DDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967C98F193E6A0700ED3DDD /* UIKit.framework */; };
@@ -28,6 +27,8 @@
 		1967C9BA193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */; };
 		1967C9C5193E6A2D00ED3DDD /* maView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9C4193E6A2D00ED3DDD /* maView.m */; };
 		19BA7C3419436791007D1F8D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BA7C3319436791007D1F8D /* AddressBook.framework */; };
+		19BA7C3A1943C359007D1F8D /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = 19BA7C381943C359007D1F8D /* world.png */; };
+		19BA7C3B1943C359007D1F8D /* localisation.png in Resources */ = {isa = PBXBuildFile; fileRef = 19BA7C391943C359007D1F8D /* localisation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		195B8C36194265FB00189019 /* mesAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mesAnnotations.m; sourceTree = "<group>"; };
 		195C89AB193FB7E300FFDD85 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		195C89AD193FB7E900FFDD85 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		195C89B3193FBB2400FFDD85 /* fond-2048x2048.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fond-2048x2048.jpg"; sourceTree = "<group>"; };
 		1967C988193E6A0700ED3DDD /* ArnaudL-iSouvenir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArnaudL-iSouvenir.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1967C98B193E6A0700ED3DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1967C98D193E6A0700ED3DDD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +70,8 @@
 		1967C9C4193E6A2D00ED3DDD /* maView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maView.m; sourceTree = "<group>"; };
 		19BA7C3319436791007D1F8D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		19BA7C351943679B007D1F8D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		19BA7C381943C359007D1F8D /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
+		19BA7C391943C359007D1F8D /* localisation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = localisation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		1967C991193E6A0700ED3DDD /* ArnaudL-iSouvenir */ = {
 			isa = PBXGroup;
 			children = (
+				19BA7C371943C33F007D1F8D /* Images */,
 				1967C99A193E6A0700ED3DDD /* AppDelegate.h */,
 				1967C99B193E6A0700ED3DDD /* AppDelegate.m */,
 				1967C99D193E6A0700ED3DDD /* Main_iPhone.storyboard */,
@@ -146,7 +149,6 @@
 				1967C9C4193E6A2D00ED3DDD /* maView.m */,
 				195B8C35194265FB00189019 /* mesAnnotations.h */,
 				195B8C36194265FB00189019 /* mesAnnotations.m */,
-				195C89B3193FBB2400FFDD85 /* fond-2048x2048.jpg */,
 				1967C9A6193E6A0700ED3DDD /* Images.xcassets */,
 				1967C992193E6A0700ED3DDD /* Supporting Files */,
 			);
@@ -180,6 +182,15 @@
 				1967C9B6193E6A0700ED3DDD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19BA7C371943C33F007D1F8D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				19BA7C381943C359007D1F8D /* world.png */,
+				19BA7C391943C359007D1F8D /* localisation.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1967C9A2193E6A0700ED3DDD /* Main_iPad.storyboard in Resources */,
+				19BA7C3B1943C359007D1F8D /* localisation.png in Resources */,
+				19BA7C3A1943C359007D1F8D /* world.png in Resources */,
 				1967C9A7193E6A0700ED3DDD /* Images.xcassets in Resources */,
 				1967C99F193E6A0700ED3DDD /* Main_iPhone.storyboard in Resources */,
-				195C89B4193FBB2400FFDD85 /* fond-2048x2048.jpg in Resources */,
 				1967C996193E6A0700ED3DDD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
