@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import <AddressBook/AddressBook.h>
 #import "mesAnnotations.h"
 
-@interface maView : UIView <CLLocationManagerDelegate, MKMapViewDelegate, UIActionSheetDelegate> {
+@interface maView : UIView <MKMapViewDelegate, UIActionSheetDelegate, UIAlertViewDelegate> {
     //Interne
     BOOL isIpad;
     BOOL isIOS6;
-    BOOL isCalling;
     BOOL isBackground;
     BOOL isGeoCoding;
+    BOOL isFollowingUserLocation;
     long compteur;
     
     // Manager
@@ -29,6 +30,9 @@
     
     // AlertView / ActionSheet
     UIActionSheet *geoCodingActionSheet;
+    UIActionSheet *annotationListActionSheet;
+    NSArray *maListeAnnotationsTriee;
+    UIAlertView *addAnnotationAlertView;
     
     // ToolBar Button
     UIBarButtonItem *fixed10SpaceBarButton;
@@ -37,6 +41,7 @@
     UIBarButtonItem *addAnnotationBarButton;
     UIBarButtonItem *userLocationBarButton;
     UIBarButtonItem *switchGeoCoding;
+    UIBarButtonItem *followUserLocationBarButton;
     
     // Gesture
     UILongPressGestureRecognizer *clickLong;

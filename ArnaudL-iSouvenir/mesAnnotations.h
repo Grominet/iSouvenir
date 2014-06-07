@@ -12,7 +12,6 @@
 
 @interface mesAnnotations : NSObject <MKAnnotation>
 
-// besoin?
 @property (nonatomic,assign,readwrite) CLLocationCoordinate2D coordinate;
 @property (nonatomic,copy,readwrite) NSString *title;
 @property (nonatomic,copy,readwrite) NSString *subtitle;

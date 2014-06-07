@@ -16,6 +16,8 @@
 
 @implementation ViewController
 
+#pragma mark - Initialize
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,5 +35,13 @@
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [vue setFromOrientation:toInterfaceOrientation];
 }
+
+#pragma mark - ToolBar Image Management
+
+/*+ (UIImage *)imageNamed:(NSString *)name
+{
+    UIImage *image = [UIImage imageNamed:name];
+    return [UIImage imageWithCGImage:[image CGImage] scale:(image.scale * 50.0/24.0) orientation:image.imageOrientation];
+}*/
 
 @end

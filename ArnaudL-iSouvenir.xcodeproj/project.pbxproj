@@ -27,6 +27,7 @@
 		1967C9B8193E6A0700ED3DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1967C9B6193E6A0700ED3DDD /* InfoPlist.strings */; };
 		1967C9BA193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */; };
 		1967C9C5193E6A2D00ED3DDD /* maView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9C4193E6A2D00ED3DDD /* maView.m */; };
+		19BA7C3419436791007D1F8D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BA7C3319436791007D1F8D /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArnaudL_iSouvenirTests.m; sourceTree = "<group>"; };
 		1967C9C3193E6A2D00ED3DDD /* maView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maView.h; sourceTree = "<group>"; };
 		1967C9C4193E6A2D00ED3DDD /* maView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maView.m; sourceTree = "<group>"; };
+		19BA7C3319436791007D1F8D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		19BA7C351943679B007D1F8D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BA7C3419436791007D1F8D /* AddressBook.framework in Frameworks */,
 				195C89AE193FB7E900FFDD85 /* MapKit.framework in Frameworks */,
 				195C89AC193FB7E300FFDD85 /* CoreLocation.framework in Frameworks */,
 				1967C98E193E6A0700ED3DDD /* CoreGraphics.framework in Frameworks */,
@@ -117,6 +121,8 @@
 		1967C98A193E6A0700ED3DDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19BA7C351943679B007D1F8D /* AddressBookUI.framework */,
+				19BA7C3319436791007D1F8D /* AddressBook.framework */,
 				195C89AD193FB7E900FFDD85 /* MapKit.framework */,
 				195C89AB193FB7E300FFDD85 /* CoreLocation.framework */,
 				1967C98B193E6A0700ED3DDD /* Foundation.framework */,
