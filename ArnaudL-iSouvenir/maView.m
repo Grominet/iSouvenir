@@ -81,13 +81,13 @@
         
         
         // Getion des contraintes
-        // Définition du dicitonnaire contenant les vues
+            // Définition du dicitonnaire contenant les vues
         NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings (maMapView, maToolBar);
         [maMapView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [maToolBar setTranslatesAutoresizingMaskIntoConstraints:NO];
         
-        // Visual format documentation : https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH3
-        // Gestion des contraintes des vues
+            // Visual format documentation : https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH3
+            // Gestion des contraintes des vues
         NSArray *maMapViewH = [NSLayoutConstraint
                                constraintsWithVisualFormat:@"H:|[maMapView]|" // H: optionnel
                                options:NSLayoutFormatAlignAllBaseline metrics:nil
@@ -345,6 +345,7 @@
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
+    //Auto Centrage de la vue sur la localisation Utilisateur, si il bouge.
     if (isFollowingUserLocation) {
         MKCoordinateRegion region;          //init
         MKCoordinateSpan span;              //init
