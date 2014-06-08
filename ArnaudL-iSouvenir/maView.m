@@ -57,7 +57,7 @@
         UIImage* monImage = [UIImage alloc];
         monImage = [UIImage imageNamed:@"localisation.png"];
         UIImage* monImageLocalisation = [UIImage imageWithCGImage:[monImage CGImage] scale:(monImage.scale * 50.0/24.0) orientation:monImage.imageOrientation];
-        followUserLocationBarButton = [[UIBarButtonItem alloc] initWithImage:monImageLocalisation style:UIBarButtonItemStyleDone target:self action:@selector(switchFollowUserLocation:)];
+        followUserLocationBarButton = [[UIBarButtonItem alloc] initWithImage:monImageLocalisation style:UIBarButtonItemStylePlain target:self action:@selector(switchFollowUserLocation:)];
         
         
         addAnnotationBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addManualAnnotation:)];
@@ -65,7 +65,7 @@
         
         monImage = [UIImage imageNamed:@"world.png"];
         UIImage* monImageWorld = [UIImage imageWithCGImage:[monImage CGImage] scale:(monImage.scale * 50.0/24.0) orientation:monImage.imageOrientation];
-        switchGeoCoding = [[UIBarButtonItem alloc]initWithImage:monImageWorld style:UIBarButtonItemStyleDone target:self action:@selector(switchGeoCoding:)];
+        switchGeoCoding = [[UIBarButtonItem alloc]initWithImage:monImageWorld style:UIBarButtonItemStylePlain target:self action:@selector(switchGeoCoding:)];
         
             // Standard space
         flexibleSpaceBarButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
@@ -79,6 +79,39 @@
         [maToolBar setAlpha:0.7];
         [self addSubview:maToolBar];
         
+        
+        // Getion des contraintes
+        // Définition du dicitonnaire contenant les vues
+        NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings (maMapView, maToolBar);
+        [maMapView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [maToolBar setTranslatesAutoresizingMaskIntoConstraints:NO];
+        
+        // Visual format documentation : https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH3
+        // Gestion des contraintes des vues
+        NSArray *maMapViewH = [NSLayoutConstraint
+                               constraintsWithVisualFormat:@"H:|[maMapView]|" // H: optionnel
+                               options:NSLayoutFormatAlignAllBaseline metrics:nil
+                               views:viewsDictionary];
+        NSArray *maMapViewV = [NSLayoutConstraint
+                               constraintsWithVisualFormat:@"V:|[maMapView]|"
+                               options:NSLayoutFormatAlignAllBaseline metrics:nil
+                               views:viewsDictionary];
+        NSArray *maToolBarH = [NSLayoutConstraint
+                               constraintsWithVisualFormat:@"H:|[maToolBar]|"
+                               options:NSLayoutFormatAlignAllBaseline metrics:nil
+                               views:viewsDictionary];
+        NSArray *maToolBarV = [NSLayoutConstraint
+                               constraintsWithVisualFormat:@"V:[maToolBar]-|"
+                               options:NSLayoutFormatAlignAllBaseline metrics:nil
+                               views:viewsDictionary];
+        
+        // On ajoute les contraintes à la vue : c'est fini, trop facile!
+        [self addConstraints:maMapViewH];
+        [self addConstraints:maMapViewV];
+        [self addConstraints:maToolBarH];
+        [self addConstraints:maToolBarV];
+        
+        
         // et on affiche tout ça
         [self setFromOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
     }
@@ -90,46 +123,20 @@
     
     // Gestion du frame
     // on récupère la frame de l'écran pour la redimensionner selon l'orientation
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGRect screenRect;
+    if (isIOS6) {
+        screenRect = [[UIScreen mainScreen] applicationFrame]; // on prend juste le cadre de l'appli
+    } else {
+        screenRect = [[UIScreen mainScreen] bounds];
+    }
     
     if ( orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight )    {
         // mode Horizontal
-        self.frame = CGRectMake(screenRect.origin.x,screenRect.origin.y,screenRect.size.height,screenRect.size.width);
+        self.frame = CGRectMake(0,0,screenRect.size.height,screenRect.size.width);
     }else{
         // sinon mode Vertical (pas d'autres mode hein?)
-        self.frame = CGRectMake(screenRect.origin.x,screenRect.origin.y,screenRect.size.width,screenRect.size.height);
+        self.frame = CGRectMake(0,0,screenRect.size.width,screenRect.size.height);
     }
-    
-    // Getion des contraintes
-        // Définition du dicitonnaire contenant les vues
-    NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings (maMapView, maToolBar);
-    [maMapView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [maToolBar setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-        // Gestion des contraintes des vues
-    NSArray *maMapViewH = [NSLayoutConstraint
-                           constraintsWithVisualFormat:@"H:|[maMapView]|" // H: optionnel
-                           options:NSLayoutFormatAlignAllBaseline metrics:nil
-                           views:viewsDictionary];
-    NSArray *maMapViewV = [NSLayoutConstraint
-                           constraintsWithVisualFormat:@"V:|[maMapView]|"
-                           options:NSLayoutFormatAlignAllBaseline metrics:nil
-                           views:viewsDictionary];
-    NSArray *maToolBarH = [NSLayoutConstraint
-                           constraintsWithVisualFormat:@"H:|[maToolBar]|"
-                           options:0 metrics:nil
-                           views:viewsDictionary];
-    NSArray *maToolBarV = [NSLayoutConstraint
-                           constraintsWithVisualFormat:@"V:[maToolBar]-|"
-                           options:0 metrics:nil
-                           views:viewsDictionary];
-    
-        // On ajoute les contraintes à la vue : c'est fini, trop facile!
-    [self addConstraints:maMapViewH];
-    [self addConstraints:maMapViewV];
-    [self addConstraints:maToolBarH];
-    [self addConstraints:maToolBarV];
-
     
 }
 
@@ -143,7 +150,6 @@
         CGPoint touchPoint = [gestureRecognizer locationInView:maMapView]; // Où as-t-on cliqué?
         CLLocationCoordinate2D touchMapCoordinate =[maMapView convertPoint:touchPoint toCoordinateFromView:maMapView]; // et en coordonnées sur maMapView ça veut dire quoi?
         NSLog(@"clic long IN");
-
         [self addMyPlacemark:touchMapCoordinate]; // parfait! on envoi ça à la fonction
     }
 }
@@ -219,7 +225,7 @@
 
 -(void)addMyPlacemark:(CLLocationCoordinate2D)location {
 // Ajoute une annotation
-
+    
     if (isGeoCoding) {
         //mode GeoCoding
         CLLocation* encLocation = [[CLLocation alloc] initWithCoordinate:location altitude:0 horizontalAccuracy:0 verticalAccuracy:0 timestamp:nil];
@@ -342,8 +348,8 @@
     if (isFollowingUserLocation) {
         MKCoordinateRegion region;          //init
         MKCoordinateSpan span;              //init
-        span.latitudeDelta = 0.035;
-        span.longitudeDelta = 0.035;
+        span.latitudeDelta = 0.005;
+        span.longitudeDelta = 0.005;
         CLLocationCoordinate2D location;    //init
         location.latitude = userLocation.coordinate.latitude;
         location.longitude = userLocation.coordinate.longitude;
