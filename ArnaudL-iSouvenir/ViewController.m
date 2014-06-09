@@ -33,14 +33,17 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+-(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration {
+    
     [vue setFromOrientation:toInterfaceOrientation];
 }
 
 
 #pragma mark - AddressBook protocol
 
--(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+-(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
+     shouldContinueAfterSelectingPerson:(ABRecordRef)person
 {
     // On obtient nos valeurs quand un contact est sélectionné
     NSString *firstName=(__bridge NSString *) (ABRecordCopyValue(person, kABPersonFirstNameProperty));
@@ -59,9 +62,12 @@
     return NO; // NO = non on ne continue pas (pas d'ouverture de la fiche)
 }
 
--(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier
+-(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
+     shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                               property:(ABPropertyID)property
+                             identifier:(ABMultiValueIdentifier)identifier
 {
-    return YES;
+    return NO;
 }
 
 -(void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker

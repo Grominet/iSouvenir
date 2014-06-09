@@ -26,6 +26,7 @@
 		1967C9B8193E6A0700ED3DDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1967C9B6193E6A0700ED3DDD /* InfoPlist.strings */; };
 		1967C9BA193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */; };
 		1967C9C5193E6A2D00ED3DDD /* maView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1967C9C4193E6A2D00ED3DDD /* maView.m */; };
+		19754E7C1945F1F600BFD77B /* recycle43_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 19754E7B1945F1F600BFD77B /* recycle43_red.png */; };
 		19BA7C3419436791007D1F8D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BA7C3319436791007D1F8D /* AddressBook.framework */; };
 		19BA7C3A1943C359007D1F8D /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = 19BA7C381943C359007D1F8D /* world.png */; };
 		19BA7C3B1943C359007D1F8D /* localisation.png in Resources */ = {isa = PBXBuildFile; fileRef = 19BA7C391943C359007D1F8D /* localisation.png */; };
@@ -68,6 +69,7 @@
 		1967C9B9193E6A0700ED3DDD /* ArnaudL_iSouvenirTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArnaudL_iSouvenirTests.m; sourceTree = "<group>"; };
 		1967C9C3193E6A2D00ED3DDD /* maView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maView.h; sourceTree = "<group>"; };
 		1967C9C4193E6A2D00ED3DDD /* maView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maView.m; sourceTree = "<group>"; };
+		19754E7B1945F1F600BFD77B /* recycle43_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recycle43_red.png; sourceTree = "<group>"; };
 		19BA7C3319436791007D1F8D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		19BA7C351943679B007D1F8D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		19BA7C381943C359007D1F8D /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				19BA7C381943C359007D1F8D /* world.png */,
 				19BA7C391943C359007D1F8D /* localisation.png */,
+				19754E7B1945F1F600BFD77B /* recycle43_red.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				1967C9A2193E6A0700ED3DDD /* Main_iPad.storyboard in Resources */,
 				19BA7C3B1943C359007D1F8D /* localisation.png in Resources */,
 				19BA7C3A1943C359007D1F8D /* world.png in Resources */,
+				19754E7C1945F1F600BFD77B /* recycle43_red.png in Resources */,
 				1967C9A7193E6A0700ED3DDD /* Images.xcassets in Resources */,
 				1967C99F193E6A0700ED3DDD /* Main_iPhone.storyboard in Resources */,
 				1967C996193E6A0700ED3DDD /* InfoPlist.strings in Resources */,

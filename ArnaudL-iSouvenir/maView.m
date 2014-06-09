@@ -149,7 +149,8 @@
     if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) { // évenement à l'appui
         CGPoint touchPoint = [gestureRecognizer locationInView:maMapView]; // Où as-t-on cliqué?
         CLLocationCoordinate2D touchMapCoordinate =[maMapView convertPoint:touchPoint toCoordinateFromView:maMapView]; // et en coordonnées sur maMapView ça veut dire quoi?
-        NSLog(@"clic long IN");
+        NSLog(@"clic long");
+        [maMapView deselectAnnotation:[[maMapView selectedAnnotations] lastObject] animated:NO]; //déselection de la pin active au besoin
         [self addMyPlacemark:touchMapCoordinate]; // parfait! on envoi ça à la fonction
     }
 }
@@ -250,7 +251,7 @@
                 //NSString *country = [[placemark addressDictionary] objectForKey:(NSString *)kABPersonAddressCountryKey];
                 //NSString *zip = [[placemark addressDictionary] objectForKey:(NSString *)kABPersonAddressZIPKey];
                 
-                NSString *myString = [[NSString alloc] init]; // au cas où un petit problème de syntaxe
+                NSString *myString; // au cas où un petit problème de syntaxe
                 if (name == nil) {
                      myString = city;
                 }else if (city == nil){
@@ -304,7 +305,12 @@
         [pin setCanShowCallout:YES];
         [pin setDraggable:YES];
         [pin setRightCalloutAccessoryView:[UIButton buttonWithType:UIButtonTypeContactAdd]];
-    
+        
+        UIImage* trashImage = [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"recycle43_red" ofType:@"png"]];
+        UIButton* trashButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [trashButton setFrame:CGRectMake(0, 0, 30, 30)];
+        [trashButton setImage:trashImage forState:UIControlStateNormal];
+        [pin setLeftCalloutAccessoryView:trashButton];
         return pin;
     }
     else {
@@ -332,12 +338,12 @@
             [abNavController setDisplayedProperties:aAfficher];
             [self setLastAnnotationSelected:view];
             [_VC presentViewController:abNavController animated:YES completion:nil];
-
         }
-        if ([(UIButton*)control buttonType] == UIButtonTypeInfoLight) {
-            // Bouton InfoLight
-
-            
+        if ([(UIButton*)control buttonType] == UIButtonTypeCustom) {
+            // Bouton Poubelle
+            NSLog(@"On m'a cliqué!");
+            [maMapView removeAnnotation:[view annotation]];
+            [self setLastAnnotationSelected:[[maMapView annotations] lastObject]];
         }
         
     }
@@ -423,7 +429,7 @@
                  //NSString *country = [[placemark addressDictionary] objectForKey:(NSString *)kABPersonAddressCountryKey];
                  //NSString *zip = [[placemark addressDictionary] objectForKey:(NSString *)kABPersonAddressZIPKey];
                  
-                 NSString *myString = [[NSString alloc] init]; // au cas où un petit problème de syntaxe
+                 NSString *myString; // au cas où un petit problème de syntaxe
                  if (name == nil) {
                      myString = city;
                  }else if (city == nil){
